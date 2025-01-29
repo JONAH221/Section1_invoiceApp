@@ -11,6 +11,27 @@ import java.util.Scanner;
  */
 public class InvoiceApp {
     /**
+     * New doubles (subTotal, disCountPercent)
+     * new method named getDiscountPercent
+     * wrote inside the method an if else statement to determine the discount
+     * based on the subTotal of the users item's
+     */
+    private static double subTotal;
+    private static double disCountPercent;
+
+    private static void getDiscountPercent() {
+        if (subTotal >= 200) {
+            disCountPercent = 0.20;
+        } else if (subTotal >= 100) {
+            disCountPercent = 0.10;
+        } else if (subTotal >= 50) {
+            disCountPercent = 0.05;
+        } else {
+            disCountPercent = 0.0;
+        }
+    }
+
+    /**
      * Scanner for all user input
      **/
     private static final Scanner sc = new Scanner(System.in);
