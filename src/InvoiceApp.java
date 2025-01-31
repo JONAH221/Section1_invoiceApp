@@ -5,31 +5,12 @@ import java.util.Scanner;
 /**
  * Represents an Invoice Calculator.
  *
- * @author <your group programmer names goes here>
- * @version 1.0 <update this to version 2>
+ * @author <Jonah Zuehlke, >
+ * @version 2.0
  * @link <Your GitHub Repository URL goes here>
  */
 public class InvoiceApp {
-    /**
-     * New doubles (subTotal, disCountPercent)
-     * new method named getDiscountPercent
-     * wrote inside the method an if else statement to determine the discount
-     * based on the subTotal of the users item's
-     */
-    private static double subTotal;
-    private static double disCountPercent;
 
-    private static void getDiscountPercent() {
-        if (subTotal >= 200) {
-            disCountPercent = 0.20;
-        } else if (subTotal >= 100) {
-            disCountPercent = 0.10;
-        } else if (subTotal >= 50) {
-            disCountPercent = 0.05;
-        } else {
-            disCountPercent = 0.0;
-        }
-    }
 
     /**
      * Scanner for all user input
@@ -150,12 +131,38 @@ public class InvoiceApp {
 
     } // end of getYesNo method
 
+
     /**
      * Print the user's receipt
      * @param descriptionList All descriptions for items purchased
      * @param qtyList All qualities for items purchased
      * @param priceList All prices for items purchased
      */
+
+
+    /**
+     * New doubles (subTotal, disCountPercent)
+     * new method named getDiscountPercent
+     * wrote inside the method an if else statement to determine the discount
+     * based on the subTotal of the users item's
+     */
+
+    private static double subTotal;
+    private static double disCountPercent;
+
+    private static double getDiscountPercent() {
+        if (subTotal >= 200) {
+            disCountPercent = 0.20;
+        } else if (subTotal >= 100) {
+            disCountPercent = 0.10;
+        } else if (subTotal >= 50) {
+            disCountPercent = 0.05;
+        } else {
+            disCountPercent = 0.0;
+        }
+        return disCountPercent;
+    }
+
     private static void printReceipt(List<String> descriptionList, List<Integer> qtyList, List<Double> priceList) {
         String description = "?";
         int qty = 0;
