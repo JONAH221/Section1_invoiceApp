@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Represents an Invoice Calculator.
  *
- * @author <Jonah Zuehlke, >
+ * @author <Jonah Zuehlke, Kathryn Wemhoff>
  * @version 2.0
  * @link <Your GitHub Repository URL goes here>
  */
@@ -170,6 +170,13 @@ public class InvoiceApp {
 
         double subTotal = 0.0;
         double receiptTotal = 0.0;
+        /**
+         * Added double variables discountPercent, discountAmount, savingsTotal
+         */
+
+        double discountPercent;
+        double discountAmount;
+        double savingsTotal;
 
         System.out.println(InvoiceApp.DOUBLE_DASH_LINE);
         System.out.println("Customer Receipt");
@@ -186,7 +193,7 @@ public class InvoiceApp {
             System.out.println();
             System.out.printf("%-20s  %3d  @  $%,6.2f = $%,8.2f\n", description, qty, price, subTotal);
 
-            Discount = InvoiceApp.disCountPercent();
+
 
             receiptTotal += subTotal;
 
