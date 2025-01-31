@@ -150,7 +150,7 @@ public class InvoiceApp {
     private static double subTotal;
     private static double disCountPercent;
 
-    private static double getDiscountPercent() {
+    private static double getDiscountPercent(double subTotal) {
         if (subTotal >= 200) {
             disCountPercent = 0.20;
         } else if (subTotal >= 100) {
@@ -185,6 +185,8 @@ public class InvoiceApp {
 
             System.out.println();
             System.out.printf("%-20s  %3d  @  $%,6.2f = $%,8.2f\n", description, qty, price, subTotal);
+
+            Discount = InvoiceApp.disCountPercent();
 
             receiptTotal += subTotal;
 
