@@ -205,7 +205,11 @@ public class InvoiceApp {
 
         System.out.println(InvoiceApp.SINGLE_DASH_LINE);
 
-        if
+        if (discountPercent > 0.0) { //begin if statement
+            discountAmount = subTotal * discountPercent;
+            System.out.printf("Discount (%.1f%%): $%.2f\n", discountPercent * 100, discountAmount);
+            savingsTotal += discountAmount;
+        } // end of if statement
 
         System.out.printf("Receipt Total: $%,8.2f\n", receiptTotal);
         System.out.println(InvoiceApp.SINGLE_DASH_LINE);
