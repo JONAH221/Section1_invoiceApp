@@ -193,11 +193,13 @@ public class InvoiceApp {
             System.out.println();
             System.out.printf("%-20s  %3d  @  $%,6.2f = $%,8.2f\n", description, qty, price, subTotal);
 
+            discountPercent = getDiscountPercent(subTotal); //call getDiscountPercent
+
 
 
             receiptTotal += subTotal;
 
-        } // end of for lop
+        } // end of for loop
 
         System.out.println(InvoiceApp.SINGLE_DASH_LINE);
         System.out.printf("Receipt Total: $%,8.2f\n", receiptTotal);
