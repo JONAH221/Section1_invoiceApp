@@ -201,7 +201,7 @@ public class InvoiceApp {
 
             receiptTotal += subTotal;
 
-        } // end of for lop
+        } // end of for loop
 
         System.out.println(InvoiceApp.SINGLE_DASH_LINE);
 
@@ -210,6 +210,10 @@ public class InvoiceApp {
             System.out.printf("Discount (%.1f%%): $%.2f\n", discountPercent * 100, discountAmount);
             savingsTotal += discountAmount;
         } // end of if statement
+
+        if (receiptTotal > 0.0) { //begin if statement
+            System.out.printf("Savings Total: $%,8.2f\n", savingsTotal);
+        } //end of if statement
 
         System.out.printf("Receipt Total: $%,8.2f\n", receiptTotal);
         System.out.println(InvoiceApp.SINGLE_DASH_LINE);
