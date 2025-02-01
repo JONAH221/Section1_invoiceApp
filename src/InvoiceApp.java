@@ -139,7 +139,7 @@ public class InvoiceApp {
      * @param priceList All prices for items purchased
      */
 
-
+            
     /**
      * New doubles (subTotal, disCountPercent)
      * new method named getDiscountPercent
