@@ -151,11 +151,15 @@ public class InvoiceApp {
     private static double disCountPercent;
 
     private static double getDiscountPercent(double subTotal) {
-        if (subTotal >= 200) {
+        if (subTotal >= 50.0) {
+            disCountPercent = 0.25;
+        } else if (subTotal >= 40.0) {
             disCountPercent = 0.20;
-        } else if (subTotal >= 100) {
+        } else if (subTotal >= 30) {
+            disCountPercent = 0.15;
+        } else if (subTotal >= 20) {
             disCountPercent = 0.10;
-        } else if (subTotal >= 50) {
+        } else if (subTotal >= 10) {
             disCountPercent = 0.05;
         } else {
             disCountPercent = 0.0;
