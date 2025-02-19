@@ -7,7 +7,7 @@ import java.util.Scanner;
  *
  * @author <Jonah Zuehlke, Kathryn Wemhoff>
  * @version 2.0
- * @link <Your GitHub Repository URL goes here>
+ * @link https://github.com/JONAH221/Section1_invoiceApp
  */
 public class InvoiceApp {
 
